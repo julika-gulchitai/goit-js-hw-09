@@ -1,0 +1,2 @@
+document.querySelector(".form").addEventListener("submit",(function(e){e.preventDefault();Number(e.target.elements.delay.value);for(var t=Number(e.target.elements.step.value),o=Number(e.target.elements.amount.value),n=0;n<o;n++){var a=void Math.random();console.log(a),a.then((function(e){var t=e.position,o=e.delay;console.log("✅ Fulfilled promise ".concat(t," in ").concat(o,"ms"))})).catch((function(e){var t=e.position,o=e.delay;console.log("❌ Rejected promise ".concat(t," in ").concat(o,"ms"))})),t}}));
+//# sourceMappingURL=03-promises.250c3b6b.js.map
