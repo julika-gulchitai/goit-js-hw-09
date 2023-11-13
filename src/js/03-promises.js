@@ -1,20 +1,18 @@
-const form = document.querySelector('.form');
+const form = document.querySelector('form');
 form.addEventListener('submit', onFormInputData);
 
 function createPromise(position, delay) {
   const shouldResolve = Math.random() > 0.3;
-  const promise = null
-  //   new Promise((resolve, reject) => {
-  //   setTimeout(() => {
-  //     if (shouldResolve) {
-  //       resolve({ position, delay });
-  //     } else {
-  //       reject({ position, delay });
-  //     }
-  //   }, delay);
-  // });
-  cnsole.log(promise)
-  return promise
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (shouldResolve) {
+        resolve({ position: position, delay: delay });
+      } else {
+        reject({ position: position, delay: delay });
+      }
+    }, delay);
+  });
+  return promise;
 }
 
 function onFormInputData(event) {
@@ -25,7 +23,6 @@ function onFormInputData(event) {
 
   for (let i = 0; i < amountInput; i++) {
     const promise = createPromise(i, delayInput)
-    console.log(promise)
     promise.then(({ position, delay }) => {
         console.log(
           `✅ Fulfilled promise ${position} in ${delay}ms`
@@ -40,36 +37,6 @@ function onFormInputData(event) {
     delayInput += stepInput;
   }
 }
-
-
-// function createPromise(position, delay) {
-//     const shouldResolve = Math.random() > 0.3;
-//     return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-      
-//       if (shouldResolve) {
-//         resolve({ position, delay })
-//       } else {
-//         reject({ position, delay })
-//       }
-//     }, delay)
-//   })
-// }
-
-
-
-
-
-
-function createPromise(position, delay) {
-  const shouldResolve = Math.random() > 0.3;
-  if (shouldResolve) {
-    // Fulfill
-  } else {
-    // Reject
-  }
-}
-
 
 // Напиши скрипт, який на момент сабміту форми викликає функцію 
 // createPromise(position, delay) стільки разів, скільки ввели в поле amount.Під час кожного виклику передай 
