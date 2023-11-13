@@ -16,3 +16,63 @@ img {
   display: block;
   max-width: 100%;
 }
+button {
+  cursor: pointer;
+  /* display: inline-flexbox; */
+  /* align-items: center; */
+  justify-content: space-between;
+  border-radius: 10px;
+  outline-style: outset;
+  font-size: 20px;
+  color: rgb(146, 133, 138);
+  /* min-width: 100px; */
+  padding: 5px 12px;
+  margin: 0 auto;
+}
+
+.container {
+  text-align: center;
+}
+
+.task-link {
+  text-decoration: solid;
+  font-size: 20px;
+  width: 100px;
+  padding: 8px;
+  border-radius: 0 10px 10px 0;
+  background-color: rgba(158, 126, 137, 0.5);
+  color: rgba(225, 227, 215, 0.9);
+  display: block;
+  margin-bottom: 20px;
+}
+
+.value {
+  min-width: 60px;
+  text-align: center;
+  padding-bottom: 15px;
+  align-items: center;
+  /* position: relative; */
+}
+
+/* *,
+::after,
+::before {
+  box-sizing: border-box;
+} */
+
+div {
+  display: block;
+  justify-content: center;
+}
+
+.value {
+  /* min-width: max-content; */
+  /* margin: 0 auto; */
+  font-size: 30px;
+  display: flex;
+}
+.timer {
+  display: flex;
+  gap: 30px;
+  margin: 0 auto;
+}
